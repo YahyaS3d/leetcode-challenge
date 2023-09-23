@@ -1,3 +1,18 @@
 day 6: check previous problems and try to make it more flexible with efficient performance 
 --> solve leet code streak 
 --> solve daily task  
+
+--review time complexity for the first sol (longestStrChain problem v1)--
+
+The time complexity of the provided solution is O(N * L^2 * log(N)), where:
+
+N is the number of words in the input array.
+L is the maximum length of a word in the input array.
+Here's a breakdown of the time complexity:
+
+Sorting the array of words by length takes O(N * log(N)) time.
+The outer loop iterates through each word in the sorted array, which is O(N) iterations.
+The inner loop iterates through each character in a word, which is O(L) iterations.
+Inside the inner loop, we construct predecessor strings, which takes O(L) time.
+The lookup in the HashMap takes O(1) average time, but in the worst case, it can be O(L) if there are many collisions.
+So, the overall time complexity is O(N * L^2 * log(N)), where the dominant factor is the nested loops iterating through words and characters.
