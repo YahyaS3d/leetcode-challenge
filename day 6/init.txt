@@ -16,3 +16,15 @@ The inner loop iterates through each character in a word, which is O(L) iteratio
 Inside the inner loop, we construct predecessor strings, which takes O(L) time.
 The lookup in the HashMap takes O(1) average time, but in the worst case, it can be O(L) if there are many collisions.
 So, the overall time complexity is O(N * L^2 * log(N)), where the dominant factor is the nested loops iterating through words and characters.
+
+
+--review time complexity for the second sol (longestStrChain problem v2)--
+The time complexity is improved to O(N * L^2).
+
+The average fixing time complexity between both answers can be calculated as:
+
+Average Fixing Time Complexity = (New Time Complexity - Initial Time Complexity) / 2
+
+= (O(N * L^2) - O(N * L^2 * log(N))) / 2
+
+= (O(N * L^2 * (1 - log(N))) / 2
