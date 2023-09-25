@@ -19,3 +19,6 @@ class Solution {
         return top == 0;
     }
 }
+
+
+//Time Complexity (O(n))
