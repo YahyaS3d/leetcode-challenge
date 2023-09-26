@@ -14,7 +14,6 @@ How to solve this question in O(n) time? I tried binary indexed tree but couldn'
 Link in discussion form: https://leetcode.com/discuss/interview-question/4090407/Building-density-question
 
 ==README== 
-Sure, here's a README for the question and its corresponding answer:
 
 ---
 
@@ -77,6 +76,4 @@ print(results)  # Output: [1, 1, 2, 2]
 ```
 
 ---
-
-This README provides an overview of the House Building Problem, the problem statement, constraints, and a solution using the "Two Pointers" technique. It also includes instructions on how to use the provided code to solve the problem and provides example usage.
 
