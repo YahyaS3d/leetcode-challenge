@@ -1,0 +1,34 @@
+Given a string s, return the 
+lexicographically smallest
+ 
+subsequence
+ of s that contains all the distinct characters of s exactly once.
+
+ 
+
+Example 1:
+
+Input: s = "bcabc"
+Output: "abc"
+Example 2:
+
+Input: s = "cbacdcbc"
+Output: "acdb"
+ 
+
+Constraints:
+
+1 <= s.length <= 1000
+s consists of lowercase English letters.
+
+
+Optimizations made:
+
+Used a StringBuilder to build the result string instead of inserting characters at the beginning. This reduces memory usage and improves runtime.
+
+Skip characters that are already in the stack or already used (used[c - 'a']) to avoid unnecessary operations.
+
+In the final StringBuilder loop, we specify the initial capacity based on the size of the stack, which reduces memory allocation.
+
+These optimizations should improve both runtime and memory usage while still producing the correct lexicographically smallest subsequence. 
+
