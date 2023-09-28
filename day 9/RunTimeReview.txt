@@ -1,4 +1,4 @@
-for subsequence problem here is time complexity checkout: 
+For subsequence problem here is time complexity checks: 
 The first loop that records the last occurrence index of each character takes O(N) time as it iterates through the entire string once.
 
 The second loop that processes each character in the string also takes O(N) time in total. In the worst case, it might iterate through the string twice, but the total number of iterations is still linearly proportional to the length of the input string.
@@ -17,4 +17,4 @@ Stack<Character> stack: The size of the stack can vary depending on the input st
 
 StringBuilder result: The size of this StringBuilder depends on the number of characters in the stack, which can be at most 26. So, the memory usage of result is proportional to the size of the stack, O(26) in the worst case.
 
-In summary, the memory usage of the provided code is dominated by constant factors. It uses a small amount of memory for fixed-size arrays and data structures, so the overall memory complexity can be considered O(1), meaning it doesn't grow with the size of the input string.
+In summary, the memory usage of the provided code is dominated by constant factors. It uses a small amount of memory for fixed-size arrays and data structures, so the overall memory complexity can be considered O(1), meaning it doesn't grow with the size of the input string --> not associated with any input size also 
