@@ -35,6 +35,7 @@ This repo is to acheive the challenge to solve everyday with leetcode! starting 
 ## Repository Structure
 
 - `problems/`: Contains subdirectories for individual LeetCode challenges, each with its own README and solution files.
+- `day x/`: each day has it own challenge! 
 
 
 ---
