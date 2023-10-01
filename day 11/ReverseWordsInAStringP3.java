@@ -1,33 +1,28 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
     public String reverseWords(String s) {
-        // Split the input string into words using space as the delimiter
-        String[] words = s.split(" ");
+        char[] chars = s.toCharArray();
+        int start = 0;
         
-        // Initialize a List to store the result
-        List<String> result = new ArrayList<>();
-        
-        // Iterate through the words
-        for (String word : words) {
-            // Reverse each word using object cloning and add it to the result
-            String reversedWord = reverseWord(word);
-            result.add(reversedWord);
+        for (int end = 0; end < chars.length; end++) {
+            if (chars[end] == ' ') {
+                reverse(chars, start, end - 1);
+                start = end + 1;
+            }
         }
         
-        // Join the reversed words with spaces and return the result
-        return String.join(" ", result);
+        // Reverse the last word (or the only word if there's no space at the end)
+        reverse(chars, start, chars.length - 1);
+        
+        return new String(chars);
     }
     
-    // Helper function to reverse a word using object cloning
-    private String reverseWord(String word) {
-        StringBuilder reversed = new StringBuilder(word.length());
-        
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversed.append(word.charAt(i));
+    private void reverse(char[] chars, int left, int right) {
+        while (left < right) {
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;
+            left++;
+            right--;
         }
-        
-        return reversed.toString();
     }
 }
