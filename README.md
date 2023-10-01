@@ -24,7 +24,7 @@ This repo is to acheive the challenge to solve everyday with leetcode! starting 
 
 2. **Explore days**: Browse through the `days` directory to find a variety of LeetCode challenges.
 
-3. **Choose a Challenge**: Select a challenge that matches your current skill level or interests. Each challenge is contained in its own directory and includes a README with a problem description.
+3. **Choose a Challenge**: Select a challenge that matches your current skill level or interests. Each challenge is contained in its own directory and includes a README with a problem description, include streak challenge!! 
 
 4. **Solve and Learn**: Work on solving the problem. If you get stuck, don't worry! LeetCode provides discussion forums, editorial solutions, and hints to help you learn and improve.
 
