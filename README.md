@@ -15,7 +15,7 @@ Welcome to the LeetCode Challenge Repository! This repository is dedicated to im
 - **Diverse Problem Set**: LeetCode offers a vast and diverse collection of problems covering various topics such as data structures, algorithms, databases, and more. This diversity ensures that you encounter a wide range of problem-solving scenarios.
 
 - **Global Community**: LeetCode has a thriving community of programmers from around the world. You can learn from others, share your solutions, and collaborate on solving challenging problems.
-
+- **Follow up with strak challenge**: streak challenge seeks to attend and solve a question in leetcode throw different levels (easy/mid/hard) in order to increase algorithms and improve solving skills 
 ## Getting Started
 
 This repo is to acheive the challenge to solve everyday with leetcode! starting with easy mode 
