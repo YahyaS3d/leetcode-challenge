@@ -1,0 +1,11 @@
+The Liskov Substitution Principle is typically stated as follows:
+
+"Subtypes must be substitutable for their base types without altering the correctness of the program."
+
+In simpler terms, this principle emphasizes that objects of a derived class should be able to replace objects of the base class without affecting the correctness of the program. In order to adhere to the Liskov Substitution Principle, a subclass must meet certain criteria:
+
+The subclass must inherit the properties (attributes) and behaviors (methods) of the base class.
+
+The subclass can override methods from the base class, but these overrides should not violate the contracts established by the base class methods. Specifically, the preconditions (input requirements) of the base class methods must remain as restrictive or less restrictive in the subclass, and the postconditions (output guarantees) of the base class methods must remain as restrictive or more restrictive in the subclass.
+
+The subclass should not introduce new behaviors or state that is not present in the base class. Any additional methods or attributes in the subclass should be consistent with the base class's interface.
