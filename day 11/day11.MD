@@ -128,15 +128,16 @@ class Solution {
 - **Improvement 2:** Optimized memory usage and runtime by using an in-place character array to reverse words.
 
 Each improvement builds upon the previous one, providing a more efficient and memory-friendly solution. The final optimized solution minimizes unnecessary memory allocations and runs more efficiently.
-```
-
-You can copy and paste this Markdown document into a .md file for documentation purposes. It outlines the original solution, the two improvements, and summarizes the points improved in each step.
-
-
 ## Format Streak:
 
 ## LSP Streak: 
 
 ## Normal Streak: 
+
+```
+
+
+
+
 
 
