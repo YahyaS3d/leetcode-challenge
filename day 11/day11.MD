@@ -129,15 +129,9 @@ class Solution {
 
 Each improvement builds upon the previous one, providing a more efficient and memory-friendly solution. The final optimized solution minimizes unnecessary memory allocations and runs more efficiently.
 ## Format Streak:
-
+Overloaded method to write the HashMap contents to a file: basic used --> file stream concept! 
 ## LSP Streak: 
-
+Liskov substitution principle problem and solution: Strong behavioral subtyping
 ## Normal Streak: 
-
+Normal array problem with efficiently runtime 
 ```
-
-
-
-
-
-
