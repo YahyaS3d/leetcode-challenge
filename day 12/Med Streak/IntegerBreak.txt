@@ -1,0 +1,45 @@
+Given an integer n, break it into the sum of k positive integers, where k >= 2, and maximize the product of those integers.
+
+Return the maximum product you can get.
+
+ 
+
+Example 1:
+
+Input: n = 2
+Output: 1
+Explanation: 2 = 1 + 1, 1 × 1 = 1.
+Example 2:
+
+Input: n = 10
+Output: 36
+Explanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.
+ 
+
+Constraints:
+
+2 <= n <= 58
+
+
+--my sol-- 
+
+**idea**" 
+This code first initializes the DP array for integers from 2 to 6 since the maximum product for these integers can be obtained by breaking them into 1s and 2s.
+Then, it iterates through the integers from 7 to n, breaking them into two parts and calculating the maximum product.
+Finally, it returns the maximum product for n stored in dp[n].
+
+**enhancement** 
+
+In this optimized solution:
+
+If n is equal to 2, the maximum product is 1, and if n is equal to 3, the maximum product is 2. These are base cases that don't require further calculations.
+
+For values of n greater than 3, you can break n into as many factors of 3 as possible. This is because breaking n into factors of 3 will maximize the product. You can do this in a while loop, subtracting 3 from n in each iteration and multiplying the result by the current maxProduct. This ensures that you're breaking n into as many factors of 3 as possible.
+
+After the while loop, there will be three possible cases for n: n is 2, 3, or 4. You can handle these cases separately and return the appropriate maximum product.
+
+This optimized solution has a time complexity of O(n) because it only needs a single loop that iterates while n is greater than 4.
+
+
+
+
