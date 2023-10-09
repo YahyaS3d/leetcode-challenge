@@ -1,4 +1,4 @@
-Welcome to LeetCode Challenges!
+Welcome to LeetCode Challenges! :) 
 
 LeetCode is a platform that offers a wide range of coding challenges designed to improve your problem-solving abilities and provide access to a world of diverse programming problems. Whether you're a beginner looking to enhance your coding skills or an experienced programmer preparing for technical interviews, LeetCode has something valuable to offer.
 
