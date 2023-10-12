@@ -1,10 +1,26 @@
 //--> O(log n)
-
+//   This is MountainArray's API interface.
+//    You should not implement it, or speculate about its implementation
+//   interface MountainArray {
+//       public int get(int index) {}
+//       public int length() {}
+//   }
+ 
 class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int n = mountainArr.length();
         
-        // Binary search to find the peak element
+        int peakIndex = findPeakIndex(mountainArr, n);
+        
+        int index = binarySearch(target, mountainArr, 0, peakIndex, true);
+        if (index != -1) {
+            return index;
+        }
+        
+        return binarySearch(target, mountainArr, peakIndex, n - 1, false);
+    }
+    
+    private int findPeakIndex(MountainArray mountainArr, int n) {
         int left = 0, right = n - 1;
         while (left < right) {
             int mid = left + (right - left) / 2;
@@ -17,20 +33,10 @@ class Solution {
                 right = mid;
             }
         }
-        
-        int peakIndex = left;
-        
-        // Binary search in the increasing sequence
-        int index = binarySearchIncreasing(target, mountainArr, 0, peakIndex);
-        if (index != -1) {
-            return index;
-        }
-        
-        // Binary search in the decreasing sequence
-        return binarySearchDecreasing(target, mountainArr, peakIndex, n - 1);
+        return left;
     }
     
-    private int binarySearchIncreasing(int target, MountainArray mountainArr, int left, int right) {
+    private int binarySearch(int target, MountainArray mountainArr, int left, int right, boolean increasing) {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             int midVal = mountainArr.get(mid);
@@ -38,25 +44,17 @@ class Solution {
             if (midVal == target) {
                 return mid;
             } else if (midVal < target) {
-                left = mid + 1;
+                if (increasing) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
             } else {
-                right = mid - 1;
-            }
-        }
-        return -1;
-    }
-    
-    private int binarySearchDecreasing(int target, MountainArray mountainArr, int left, int right) {
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            int midVal = mountainArr.get(mid);
-            
-            if (midVal == target) {
-                return mid;
-            } else if (midVal < target) {
-                right = mid - 1;
-            } else {
-                left = mid + 1;
+                if (increasing) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
             }
         }
         return -1;
