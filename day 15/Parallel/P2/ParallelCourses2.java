@@ -1,34 +1,35 @@
 class Solution {
     public int minNumberOfSemesters(int n, int[][] relations, int k) {
-        int[] dp = new int[1 << n];
-        Arrays.fill(dp, n);
         int[] prereq = new int[n];
-
-        for (int[] r : relations) {
-            int prevCourse = r[0] - 1;
-            int nextCourse = r[1] - 1;
-            prereq[nextCourse] |= 1 << prevCourse;
+        for (int[] req : relations) {
+            prereq[req[1] - 1] |= 1 << (req[0] - 1);
         }
-
-        dp[0] = 0;
-
-        for (int i = 0; i < dp.length; ++i) {
-            int coursesCanBeTaken = 0;
-            for (int j = 0; j < n; ++j) {
-                if ((i & prereq[j]) == prereq[j]) {
-                    coursesCanBeTaken |= 1 << j;
-                }
-            }
-            coursesCanBeTaken &= ~i;
-
-            for (int s = coursesCanBeTaken; s > 0; s = (s - 1) & coursesCanBeTaken) {
-                if (Integer.bitCount(s) <= k) {
-                    dp[i | s] = Math.min(dp[i | s], dp[i] + 1);
-                }
+        int[] dp = new int[(1 << n)];
+        Arrays.fill(dp, -1);
+        return solve(0, n, k, prereq, dp);
+    }
+    private int solve(int mask, int n, int k, int[] prereq, int[] dp) {
+        if (mask == (1 << n) - 1) {
+            return 0;
+        }
+        if (dp[mask] != -1) {
+            return dp[mask];
+        }
+        int availableCourses = 0;
+        for (int i = 0; i < n; i += 1) {
+            if ((mask & prereq[i]) == prereq[i]) {
+                if( (mask & (1<<i))>0 )
+                    continue;
+                availableCourses |= 1 << i;
             }
         }
-
-        return dp[(1 << n) - 1];
+        int best = Integer.MAX_VALUE / 2;
+        for (int submask = availableCourses; submask > 0; submask = (submask - 1) & availableCourses) {
+            if (Integer.bitCount(submask) <= k) {
+                best = Math.min(best, 1 + solve(mask | submask, n, k, prereq, dp));
+            }
+        }
+        return dp[mask] = best;
     }
 }
 //-->O(2^n *n)
