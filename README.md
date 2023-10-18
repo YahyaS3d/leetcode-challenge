@@ -18,7 +18,7 @@ Welcome to the LeetCode Challenge Repository! This repository is dedicated to im
 - **Follow up with strak challenge**: streak challenge seeks to attend and solve a question in leetcode throw different levels (easy/mid/hard) in order to increase algorithms and improve solving skills 
 ## Getting Started
 
-This repo is to acheive the challenge to solve everyday with leetcode! starting with easy mode 
+This repo is to acheive the challenge to solve everyday with leetcode! starting with easy mode and following with streak challenge!! 
 
 1. **Clone this Repository**: Clone this repository to your local machine using `git clone`.
 
