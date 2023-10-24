@@ -2,21 +2,20 @@ class Solution(object):
     def longestPalindromeSubseq(self, s):
         n = len(s)
         
-        # Initialize a 2D DP array to store the lengths of the longest palindromic subsequence
-        dp = [[0] * n for _ in range(n)]
+        # Initialize a 1D DP array to store the lengths of the longest palindromic subsequence
+        dp = [0] * n
         
-        # Each character in the string is a palindrome by itself, so initialize the diagonal elements to 1
-        for i in range(n):
-            dp[i][i] = 1
-        
-        # Loop through the string and fill in the DP table
-        for cl in range(2, n + 1):
-            for i in range(n - cl + 1):
-                j = i + cl - 1
+        for i in range(n - 1, -1, -1):
+            # Initialize the diagonal element to 1
+            dp[i] = 1
+            prev = 0  # Stores the value of dp[i+1][j-1]
+            for j in range(i + 1, n):
+                temp = dp[j]  # Stores the value of dp[i][j-1]
                 if s[i] == s[j]:
-                    dp[i][j] = dp[i + 1][j - 1] + 2
+                    dp[j] = prev + 2
                 else:
-                    dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])
+                    dp[j] = max(dp[j], dp[j - 1])
+                prev = temp
         
-        # The top-right element of the DP table stores the length of the longest palindromic subsequence
-        return dp[0][n - 1]
+        # The last element of the DP array stores the length of the longest palindromic subsequence
+        return dp[n - 1]

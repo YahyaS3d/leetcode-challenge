@@ -29,3 +29,10 @@ where 'n' is the length of the input string 's'.
 This is because we have a nested loop that goes through all possible pairs of indices in the string
 the nested loop runs in linear time for each pair.
 
+==optimize space usage==
+using a 1D array instead of a 2D array for dynamic programming. Here's an updated Python solution with reduced space complexity
+(check commits to view the difference)
+
+updated solution maintains the same time complexity of O(n^2) but reduces the space complexity to O(n).
+It uses the same dynamic programming logic but iterates through the string in reverse order
+making use of a single 1D array 'dp' to store the lengths of the longest palindromic subsequences.
