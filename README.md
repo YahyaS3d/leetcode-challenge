@@ -28,7 +28,7 @@ This repo is to acheive the challenge to solve everyday with leetcode! starting 
 
 4. **Solve and Learn**: Work on solving the problem. If you get stuck, don't worry! LeetCode provides discussion forums, editorial solutions, and hints to help you learn and improve.
 
-5. **Contribute**: If you have a solution you'd like to share or an improvement to an existing solution, feel free to open a pull request. We welcome contributions from the community.
+5. **Contribute**: If you have a solution you'd like to share or an improvement to an existing solution, feel free to open a pull request. Welcome contributions from the community.
 
 6. **Join the Discussion**: Engage with others in the LeetCode Challenge community by discussing problems and sharing insights.
 
