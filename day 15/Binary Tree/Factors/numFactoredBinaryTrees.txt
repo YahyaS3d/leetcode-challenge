@@ -23,3 +23,13 @@ Constraints:
 1 <= arr.length <= 1000
 2 <= arr[i] <= 109
 All the values of arr are unique.
+
+==Time Complexity Overview== 
+
+Sorting the array: O(N * log(N)) - Sorting the array takes O(N * log(N)) time.
+
+Dynamic Programming: O(N^2) - There are two nested loops in the dynamic programming part. The outer loop runs for each element in the array, and the inner loop can also run for each element in the worst case. This results in O(N^2) time complexity for the dynamic programming part.
+
+Total Time Complexity: O(N * log(N)) + O(N^2) = O(N^2).
+
+
