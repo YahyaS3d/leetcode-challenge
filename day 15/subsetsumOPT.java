@@ -68,3 +68,4 @@ class SegmentTree {
         return Math.max(leftQuery, rightQuery);
     }
 }
+//TC --> 
