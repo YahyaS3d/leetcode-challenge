@@ -38,3 +38,13 @@ Constraints:
 
 1 <= buckets <= 1000
 1 <= minutesToDie <= minutesToTest <= 100
+
+==TC overview== 
+The loop in the solution continues until totalTests (the number of combinations explored by pigs) is greater than or equal to buckets.
+In each iteration of the loop, totalTests is multiplied by testsPerPig. 
+This multiplication operation is performed in each iteration.
+
+Since the loop runs until totalTests is greater than or equal to buckets: 
+the number of iterations is logarithmic in terms of buckets. Specificall
+it's O(log(buckets) / log(testsPerPig))
+Which represents the number of pigs required to explore all the possible combinations of buckets in the given time frame.
