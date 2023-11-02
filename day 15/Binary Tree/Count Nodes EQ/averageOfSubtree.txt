@@ -30,3 +30,15 @@ Constraints:
 
 The number of nodes in the tree is in the range [1, 1000].
 0 <= Node.val <= 1000
+
+
+== depth-first traversal ==
+For each node, calculate the average value of its subtree, and then check if the node's value is equal to this average. If it is, increment a count.
+
+== (BFS) algorithm ==
+BFS can help you process nodes level by level and avoid the recursion stack of a depth-first traversal
+
+== time complexity overview ==
+ both approaches have a time complexity of O(N), making them efficient for processing binary trees. The space complexity, however, is different: the depth-first traversal has a space complexity of O(H) (where H is the height of the tree), while the BFS approach has a space complexity of O(W) (where W is the maximum width or the number of nodes at the widest level).
+
+ 
