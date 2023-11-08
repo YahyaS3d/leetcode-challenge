@@ -1,0 +1,49 @@
+You are given an integer array nums. In one operation, you can replace any element in nums with any integer.
+
+nums is considered continuous if both of the following conditions are fulfilled:
+
+All elements in nums are unique.
+The difference between the maximum element and the minimum element in nums equals nums.length - 1.
+For example, nums = [4, 2, 5, 3] is continuous, but nums = [1, 2, 3, 5, 6] is not continuous.
+
+Return the minimum number of operations to make nums continuous.
+
+ 
+
+Example 1:
+
+Input: nums = [4,2,5,3]
+Output: 0
+Explanation: nums is already continuous.
+Example 2:
+
+Input: nums = [1,2,3,5,6]
+Output: 1
+Explanation: One possible solution is to change the last element to 4.
+The resulting array is [1,2,3,5,4], which is continuous.
+Example 3:
+
+Input: nums = [1,10,100,1000]
+Output: 3
+Explanation: One possible solution is to:
+- Change the second element to 2.
+- Change the third element to 3.
+- Change the fourth element to 4.
+The resulting array is [1,2,3,4], which is continuous.
+ 
+
+Constraints:
+
+1 <= nums.length <= 105
+1 <= nums[i] <= 109
+
+
+==algo== 
+Sort the nums array in ascending order.
+Initialize two pointers, left and right, both initially pointing to the first element (index 0) of the sorted array.
+Initialize a variable minOperations to keep track of the minimum number of operations required.
+Iterate through the nums array using the right pointer, and for each value of right, calculate the maximum possible value of left such that the condition "difference between the maximum element and the minimum element equals nums.length - 1" is satisfied.
+Update the minOperations with the minimum number of operations required to satisfy the condition for the current right value.
+Move the left pointer forward as long as the difference between nums[right] and nums[left] is greater than nums.length - 1. This step ensures that the array remains "continuous."
+Repeat steps 4-6 until the right pointer reaches the end of the array.
+Return the value of minOperations as the minimum number of operations required to make nums continuous.
