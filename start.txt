@@ -30,6 +30,11 @@ To begin your journey on LeetCode, follow these steps:
 
 6. Join Streak challenge: focusing on solving daily challenge in leetcode! 
 
+<<<<<<< HEAD
+=======
+7. Time challenge- follow up and solve each question with time complexity overview - make it less as possable 
+
+>>>>>>> 3b72249489fe6c751b991158bb2c59ccd2bcc9e9
 LeetCode challenges are not just about finding solutions but also about understanding the underlying concepts and strategies. They are a valuable resource for anyone looking to excel in the world of programming and problem solving.
 
 follow up every day strak to earn leetcode coins!! 
