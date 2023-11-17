@@ -74,14 +74,4 @@ To run the program, you can use the following command:
 python manufacturers_and_products.py
 ```
 
-Replace `manufacturers_and_products.py` with the name of your source code file.
-
-## Authors
-
-- Yahya Saad
-
-## Acknowledgments
-
-This problem was sourced from https://leetcode.com/discuss/interview-question/4129985/Help-me-with-a-problem.
-```
 
